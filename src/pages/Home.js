@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { SearchContext } from "../context/search";
-import { FormControl, Input, IconButton, Grid } from "@material-ui/core";
+import { FormControl, IconButton, Grid, TextField } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import "./Home.scss";
 
@@ -31,24 +31,34 @@ const Home = () => {
     >
       <Grid item>
         <Grid item>
-          <img
-            alt="tanjiro"
-            src={`${process.env.PUBLIC_URL}/tanjiro.jpg`}
-            height="400"
-            width="500"
-          />
-        </Grid>
-        <Grid item>
-          <form className="home__form">
-            <FormControl type="submit" className="home__formControl">
-              <Input
-                placeholder="Search for favourite Anime.."
-                className="home__input"
+           
+          <form
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "50vw",
+              height: "50vh",
+            }}
+          >
+            <FormControl type="submit" className="home__formControl"
+              style={{backgroundColor:'lightgray'}}
+            
+            >
+              <TextField
+                style= {{color:"#fff",backgroundColor:"#fff"}}
                 value={input}
+                placeholder="Seach Animes ..."
+                type="search"
                 onChange={(event) => {
                   setInput(event.target.value);
                 }}
+                id="outlined-basic"
+                label="search"
+                variant="outlined"
+                className="home__input"
               />
+
               <IconButton
                 variant="contained"
                 className="home__iconbutton"

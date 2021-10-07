@@ -9,6 +9,9 @@ import MainNavigation from "./components/MainNavigation";
 import Results from "./pages/Results";
 import Home from "./pages/Home";
 import SingleView from "./pages/SingleView";
+import Movies from './pages/Movies';
+import Series from './pages/Series';
+import Airing from './pages/Airing';
 import {SearchContext} from './context/search'
 
 function App() {
@@ -30,7 +33,7 @@ const search =(query) =>{
   return (
     <SearchContext.Provider value={{search, animeData, setData,singleData,setSingle}}>
     <Router>
-      <MainNavigation />
+       <MainNavigation /> 
       <main>
         <Switch>
           <Route path="/" exact>
@@ -42,6 +45,17 @@ const search =(query) =>{
           <Route path="/single-view" exact>
             <SingleView />
           </Route>
+          
+          <Route path="/movies" exact>
+            <Movies />
+          </Route>
+          <Route path="/airing" exact>
+            <Airing />
+          </Route>
+          <Route path="/series" exact>
+            <Series />
+          </Route>
+
           <Redirect to="/" />
         </Switch>
       </main>
