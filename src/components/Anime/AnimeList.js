@@ -4,7 +4,7 @@ import { GridList } from "@material-ui/core";
 
 // component for anime Data
 const AnimeList = (props) => {
-
+    
 
   
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import AnimeList from "../components/AnimeList";
+import AnimeList from "../components/Anime/AnimeList";
 import { SearchContext } from "../context/search";
 import {Box,Typography} from '@material-ui/core';
 

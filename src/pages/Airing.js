@@ -1,9 +1,19 @@
-import React from 'react';
+import React,{useEffect, useContext} from 'react';
+import {AiringContext} from '../context/AiringContext';
+import AiringList from '../components/Airing/AiringList';
 
 export default function Airing() {
+  const airing_context = useContext(AiringContext);
+
+  useEffect(()=>{
+     airing_context.getAiring().then((data)=>{
+       airing_context.setAiringAnime(data.results);
+       console.log (data.results);
+     })
+  },[airing_context])
   return (
     <>
-      Airing Now
+      <AiringList data={airing_context.airing} />
     </>
   );
 }

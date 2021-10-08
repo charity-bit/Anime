@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import {useHistory} from 'react-router-dom';
-import {SearchContext} from '../context/search';
+import {SearchContext} from '../../context/search';
 import {Typography, Link ,Paper,GridListTile,Grid} from '@material-ui/core';
 import "./AnimeCard.scss";
 
