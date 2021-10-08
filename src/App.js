@@ -46,7 +46,9 @@ const getAiring = () =>{
   ).then((response) =>response.json());
   
 }
+
   return (
+    <AiringContext.Provider value={airing,setAiringAnime,singleAiring,setSingleAiringAnime,getAiring}>
     <SearchContext.Provider value={{search, animeData, setData,singleData,setSingle}}>
     <Router>
        <MainNavigation /> 
@@ -65,13 +67,9 @@ const getAiring = () =>{
           <Route path="/movies" exact>
             <Movies />
           </Route>
-          <AiringContext.Provider value={airing,setAiringAnime,singleAiring,setSingleAiringAnime,getAiring}>
-   
           <Route path="/airing" exact>
             <Airing />
           </Route>
-          </AiringContext.Provider>
-          
           <Route path="/series" exact>
             <Series />
           </Route>
@@ -81,7 +79,7 @@ const getAiring = () =>{
       </main>
     </Router>
     </SearchContext.Provider>
-  
+    </AiringContext.Provider>
   );
 }
 
