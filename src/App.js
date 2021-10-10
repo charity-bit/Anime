@@ -43,10 +43,10 @@ const setSingleAiringAnime =(data) =>{
 const getAiring = () =>{
   return fetch(
     'https://api.jikan.moe/v3/top/anime/1/airing'
-  ).then((response) =>response.json());
+  ).then((response) =>console.log(response.json()));
   
 }
-
+getAiring();
   return (
     <AiringContext.Provider value={airing,setAiringAnime,singleAiring,setSingleAiringAnime,getAiring}>
     <SearchContext.Provider value={{search, animeData, setData,singleData,setSingle}}>
