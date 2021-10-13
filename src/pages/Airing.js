@@ -4,12 +4,10 @@ import AiringList from '../components/Airing/AiringList';
 
 export default function Airing() {
   const airing_context = useContext(AiringContext);
-    useEffect(()=>{
-     airing_context.getAiring().then((data)=>{
+    useEffect (async () => {
+      const data = await airing_context.getAiring();
        airing_context.setAiringAnime(data.top);
-     })
   },[airing_context]);
-  console.log (airing_context.airing);
 
   
   return (

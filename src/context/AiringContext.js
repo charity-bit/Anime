@@ -5,5 +5,6 @@ export const AiringContext = createContext({
     setAiringAnime: ()=>{},
     setSingleAiringAnime: () =>{},
     getAiring: ()=>{}
+    
 
 });
