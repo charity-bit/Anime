@@ -46,7 +46,6 @@ const Home = () => {
             
             >
               <TextField
-                style= {{color:"#fff",backgroundColor:"#fff"}}
                 value={input}
                 placeholder="Seach Animes ..."
                 type="search"

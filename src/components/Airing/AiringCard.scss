@@ -1,0 +1,35 @@
+.airingCard__container{
+    margin:10px;
+}
+.airingCard__paper_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding-left: 10px;
+   
+}
+.airingCard__paper_container::after{
+    content: "";
+    background-color: #242424;
+    top:0;
+    bottom:0;
+    opacity:0.1;
+    z-index:1;
+
+}
+.score{
+    color: white !important;
+    background-color: #3282B8 !important;
+}
+.date{
+     top: -10px;
+     position: absolute;
+}
+.title{
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+
+}

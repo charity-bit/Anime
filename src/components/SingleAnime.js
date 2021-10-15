@@ -2,8 +2,8 @@ import React from 'react';
 const SingleAnime = () =>{
 
     return(
+        <div></div>
            
-        <div>Single Anime9</div>
     );
 }
 
