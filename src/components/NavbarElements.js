@@ -2,9 +2,12 @@ import {NavLink as Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 
+
 //nav
 export const Nav = styled.nav`
 background: transparent;
+position: sticky;
+top:0;
 height: 85px;
 display:flex;
 justify-content: space-between;

@@ -8,6 +8,8 @@ export default function Airing() {
   useEffect(async () => {
     const data = await airing_context.getAiring();
     airing_context.setAiringAnime(data.top);
+    localStorage.setItem("airingData",JSON.stringify(data.top));
+
   }, [airing_context]);
 
   return (

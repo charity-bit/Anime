@@ -1,7 +1,7 @@
 import firebase from 'firebase/compat/app';
 import "firebase/compat/auth";
 
-export const auth = firebase.initializeApp({
+const firebaseConfig= {
 
     apiKey: "AIzaSyAK4G55m467t3zWs9_waywdY3mDro5BOpk",
     authDomain: "anime-33936.firebaseapp.com",
@@ -9,5 +9,9 @@ export const auth = firebase.initializeApp({
     storageBucket: "anime-33936.appspot.com",
     messagingSenderId: "619258909340",
     appId: "1:619258909340:web:bcff280d754cec25701359"  
-}).auth();
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const auth =  firebase.auth();
+
+export {auth};
 
