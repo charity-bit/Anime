@@ -1,13 +1,24 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Nav,NavLink,NavMenu,NavBtn,NavBtnLink} from './NavbarElements';
 import {IconButton} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import LoginPopUp from "../components/LoginPopUp";
+import Home from '../pages/Home';
 
 const MainNavigation = () =>{
 
-  const handleClick  = ()=>{
-
+  const [trigger,setTrigger] = useState(false);
+  const handleSignIn = () =>{
+    setTrigger(true);
   }
+  
+         useEffect(() => {
+           return (
+             <Home />
+           )
+
+                }, [])
+  
 return(
   <>
   
@@ -27,24 +38,24 @@ return(
     </NavLink>
   </NavMenu>
   <NavBtn>
-    <NavBtnLink to ="/signin">
+    <NavBtnLink to ="/signin" onClick={handleSignIn}>
       SignIn
-    </NavBtnLink>
-    <NavBtnLink to ="/signin">
-      SignUp
     </NavBtnLink>
     <hr style= {{height:'20px'}}/>
     <IconButton
                 variant="contained"
                 color="primary"
                 type="submit"
-                onClick ={handleClick}
+              
                >
                 <SearchIcon />
                 
                 </IconButton>
             
   </NavBtn>
+
+  <LoginPopUp 
+  trigger={trigger} setClose={setTrigger}/>
 
 
 </Nav>

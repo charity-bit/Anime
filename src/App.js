@@ -12,6 +12,7 @@ import SingleView from "./pages/SingleView";
 import Movies from "./pages/Movies";
 import Series from "./pages/Series";
 import Airing from "./pages/Airing";
+import LoginPopUp from "./components/LoginPopUp";
 import { SearchContext } from "./context/search";
 import { AiringContext } from "./context/AiringContext";
 
@@ -79,6 +80,9 @@ function App() {
               </Route>
               <Route path="/series" exact>
                 <Series />
+              </Route>
+              <Route path="/signin" exact>
+<LoginPopUp />
               </Route>
 
               <Redirect to="/" />

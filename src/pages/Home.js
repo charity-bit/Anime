@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { SearchContext } from "../context/search";
-import { FormControl, IconButton, Grid, TextField } from "@material-ui/core";
+import { FormControl, IconButton, Grid} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import "./Home.scss";
 
@@ -45,7 +45,7 @@ const Home = () => {
               style={{backgroundColor:'lightgray'}}
             
             >
-              <TextField
+              <input
                 value={input}
                 placeholder="Seach Animes ..."
                 type="search"
@@ -66,7 +66,7 @@ const Home = () => {
                 disabled={!input}
                 onClick={handleSearch}
               >
-                <SearchIcon />
+                <SearchIcon className="search__icon" />
               </IconButton>
             </FormControl>
           </form>
